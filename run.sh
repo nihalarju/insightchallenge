@@ -11,8 +11,8 @@
 res1=$(date +%s.%N)
 
 
-inputfile='./bup/tweets.txt'
-#inputfile='./tweet_input/tweets.txt'
+#inputfile='./bup/tweets.txt'
+inputfile='./tweet_input/tweets.txt'
 output1='./tweet_output/ft1.txt'
 output2='./tweet_output/ft2.txt'
 
