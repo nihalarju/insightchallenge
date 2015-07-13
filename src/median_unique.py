@@ -13,7 +13,7 @@ fout=open(sys.argv[2],'w')
 #=============================================================================
 def insertInOrder(sortedlist,num):
     # Given an sorted list (sortedlist), and a number (num), this subroutine
-    # will insert the number in right order.
+    # will insert the number in ascending order.
     # To achieve heighest possible speed, the program does not check the 
     # sortedlist for its ordering. Careful.
     
@@ -22,7 +22,6 @@ def insertInOrder(sortedlist,num):
     # trying to find smaller and smaller pieces that bound the value (num)
     # Once the piece is small enough, just a brute force search is used.    
     length=len(sortedlist)
-    inc_lst=[]
     l=1
     r=length-2
     if length<1 or num>=sortedlist[length-1]:
@@ -32,7 +31,6 @@ def insertInOrder(sortedlist,num):
     else:
         inc=length//8+1
         while inc>3: # Find piece of size about 4*2=8 numbers
-            inc_lst.append(inc)
             # Find the left horizon
             while l+inc < length-1 and num >= sortedlist[l+inc]: 
                 l+=inc 
