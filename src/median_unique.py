@@ -5,7 +5,7 @@
 
 # We do not use numpy's median function because that's not the fastest way
 # to do this. Instead we populate list of numbers in ascending order.
-
+    
 import sys
 f=open(sys.argv[1],'r')
 fout=open(sys.argv[2],'w')
