@@ -36,12 +36,12 @@ def insertInOrder(sortedlist,num):
             # Find the left horizon
             while l+inc < length-1 and num >= sortedlist[l+inc]: 
                 l+=inc 
-            # Find the right side horizon
-            while r-inc > 0 and num <= sortedlist[r-inc]:
-                r-=inc
             if sortedlist[l]==num:
                 sortedlist.insert(l,num)
                 break
+            # Find the right side horizon
+            while r-inc > 0 and num <= sortedlist[r-inc]:
+                r-=inc
             if sortedlist[r]==num:
                 sortedlist.insert(r,num)
                 break
